@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+  <title>Карта</title>
+  
+</head>
+<body>
+  <div class="map" id="map"></div>
+
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 37.654574, lng: 55.778041},
+        zoom: 8
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALKvZu7DcQHR689o1h-jksRfdK9iE3KmY&callback=initMap"
+  async defer></script>
+</body>
+</html>
