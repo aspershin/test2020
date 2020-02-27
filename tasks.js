@@ -103,3 +103,19 @@ var countChar = function(k) {
 }
 
 countChar("L");
+
+// shift и unshift для массивов
+
+var todoList = [];
+function rememberTo(task) {
+  todoList.push(task);
+}
+function whatIsNext() {
+  return todoList.shift();
+}
+function urgentlyRememberTo(task) {
+  todoList.unshift(task);
+}
+
+console.log([1,2,3,2,1].indexOf(2));
+console.log([1,2,3,2,1].lastIndexOf(2));
