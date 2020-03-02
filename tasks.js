@@ -119,3 +119,86 @@ function urgentlyRememberTo(task) {
 
 console.log([1,2,3,2,1].indexOf(2));
 console.log([1,2,3,2,1].lastIndexOf(2));
+
+// Сумма диапазона варант 1 (неправильный)
+
+// var rangeList = [];
+// summa = 0;
+// function range(start, end, step) { //аргумент step в данном случае не является обязательным.
+//   for (i=0; i<end; i++) {
+//     rangeList.push(start);
+//     if (step != undefined) { // если шаг не равено undefined, то есть определён, то умножаем на шаг, затем складываем
+//       start+=1*step;
+//     } else {
+//       start+=1;
+//     }
+//   }
+//   console.log(rangeList);
+// }
+
+// function sum () {
+//   for(i=0; i<rangeList.length; i++) {
+//     summa += rangeList[i];
+//   }
+//   console.log(summa);
+// }
+
+// range(1,10,2)
+// sum();
+
+// сумма диапазона вариант 2 (с положительным шагом)
+
+// function range(start, end, step) { // определяем функцию range для заполнения массива
+//   var rangeList = []; // определяем массив, в который будем записывать значения
+//   summa = 0; // определяем начальную сумму чисел в массиве
+//   i = 0;
+//   while (start<=end) {
+//     rangeList.push(start);
+//     if (step!=undefined) {
+//       start+=1*step;
+//     } else {
+//       start+=1;
+//     }
+//     summa+=rangeList[i];
+//     i+=1;
+//   }
+//   console.log(rangeList);
+//   console.log(summa);
+//   console.log(typeof(summa));
+//   console.log(rangeList[i]);
+// }
+
+// range(1,10,2);
+
+// сумма диапазона вариант 3 (с отрицательным шагом)
+
+function range(start, end, step) { // определяем функцию range для заполнения массива
+  var rangeList = []; // определяем массив, в который будем записывать значения
+  summa = 0; // определяем начальную сумму чисел в массиве
+  i = 0;
+  while (start>=end) {
+    rangeList.push(start);
+    if (step!=undefined) {
+      start+=1*step;
+    } else {
+      start+=1;
+    }
+    summa+=rangeList[i];
+    i+=1;
+  }
+  console.log(rangeList);
+  console.log(summa);
+  console.log(typeof(summa));
+  console.log(rangeList[i]);
+}
+
+range(5,2,-1);
+
+// Метод reverse
+
+function reverseArray() {
+  array = [1, 2, 3];
+  console.log(array.reverse());
+}
+
+reverseArray();
