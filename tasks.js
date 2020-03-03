@@ -196,9 +196,12 @@ range(5,2,-1);
 
 // Метод reverse
 
-function reverseArray() {
-  array = [1, 2, 3];
-  console.log(array.reverse());
+function reverseArray(array) {
+  for (i=0;i<array.length;i++) {
+    console.log(array.indexOf(i));
+  }
+  console.log(array);
+  console.log(array.length);
 }
 
-reverseArray();
+reverseArray([1,2,3]);
