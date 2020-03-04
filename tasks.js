@@ -194,14 +194,34 @@ function range(start, end, step) { // определяем функцию range 
 
 range(5,2,-1);
 
-// Метод reverse
+// Обращение массива, но без использования стандартного метода reverse.
+// Вариант 1, с новым массивом.
 
 function reverseArray(array) {
-  for (i=0;i<array.length;i++) {
-    console.log(array.indexOf(i));
+  var newArray = [], index;
+  for (i=array.length;i>0;i--) {
+    index = array.length-i;
+    newArray[i] = array[index];
   }
   console.log(array);
   console.log(array.length);
+  console.log(newArray);
 }
 
-reverseArray([1,2,3]);
+reverseArray(["P","E","R","S","H","I","N"]);
+
+// Вариант 2, со старым массивом, который будет изменён.
+
+function reverseArrayInPlace(arr) {
+  var index;
+  console.log(arr);
+  console.log(arr.length);
+  for (i=arr.length;i>0;i--) {
+    index=arr.length-i;
+    arr[i] = arr[index];
+  }
+  console.log(arr);
+  console.log(arr.length);
+}
+
+reverseArrayInPlace([1,2,3,4,5,6]);
