@@ -212,16 +212,17 @@ reverseArray(["P","E","R","S","H","I","N"]);
 
 // Вариант 2, со старым массивом, который будет изменён.
 
-function reverseArrayInPlace(arr) {
+var arrayValue = [1,2,3,4,5,6]
+function reverseArrayInPlace(arrayValue) {
   var index;
-  console.log(arr);
-  console.log(arr.length);
-  for (i=arr.length;i>0;i--) {
-    index=arr.length-i;
-    arr[i] = arr[index];
+  console.log(arrayValue);
+  console.log(arrayValue.length);
+  for (i=arrayValue.length;i>0;i--) {
+    index=arrayValue.length-i;
+    arrayValue[i] = arrayValue[index];
   }
-  console.log(arr);
-  console.log(arr.length);
+  console.log(arrayValue);
+  console.log(arrayValue.length);
 }
 
-reverseArrayInPlace([1,2,3,4,5,6]);
+reverseArrayInPlace(arrayValue);
