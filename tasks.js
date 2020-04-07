@@ -226,3 +226,27 @@ function reverseArrayInPlace(arrayValue) {
 }
 
 reverseArrayInPlace(arrayValue);
+
+// Функции высшего порядка.
+
+var total = 0, count = 1;
+while (count <=10) {
+  total += count;
+  count +=1;
+}
+console.log(total);
+
+var range = function(a,b) {
+  var count = 1;
+  var total = 0;
+  while(a<=b) {
+    a+=count;
+  };
+}
+
+var sum = function() {
+  total+=a;
+  return total;
+}
+
+console.log(sum(range(1,10)));
